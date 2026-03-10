@@ -1,0 +1,757 @@
+{
+  "categorias": [
+    {
+      "nome": "Fandom Box",
+      "produtos": [
+        {
+          "referencia": "3246",
+          "nome": "PERNALONGA LOONEY",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3247",
+          "nome": "PATOLINO LOONEY",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3248",
+          "nome": "TAZ LOONEY",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3249",
+          "nome": "PIU PIU LOONEY",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3250",
+          "nome": "FRAJOLA LOONEY",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3251",
+          "nome": "SCOOBY DOO SD",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3252",
+          "nome": "SALSICHA SD",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3253",
+          "nome": "FRED SD",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3254",
+          "nome": "DAPHNE SD",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3255",
+          "nome": "VELMA SD",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3256",
+          "nome": "HARRY POTTER HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3257",
+          "nome": "HERMIONE HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3258",
+          "nome": "RON WEASLEY HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3259",
+          "nome": "DUMBLEDORE HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3260",
+          "nome": "RUBEO HAGRID HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3261",
+          "nome": "MONICA FRIENDS",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3262",
+          "nome": "PHOEBE FRIENDS",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3263",
+          "nome": "RACHEL FRIENDS",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3264",
+          "nome": "JOEY FRIENDS",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3265",
+          "nome": "ROSS FRIENDS",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3266",
+          "nome": "CHANDLER FRIENDS",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3276",
+          "nome": "HARRY POTTER - LUNA",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3299",
+          "nome": "HELLO HK",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3300",
+          "nome": "CHOCOCCAT HK",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3301",
+          "nome": "KEROPPI HK",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3302",
+          "nome": "MARU HK",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3303",
+          "nome": "BOB ESPONJA BE",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3304",
+          "nome": "PATRICK ESTRELA BE",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3305",
+          "nome": "SIRIGUEJO BE",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3306",
+          "nome": "LULA MOLUSCO BE",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3314",
+          "nome": "SNOOPY SN",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3315",
+          "nome": "CHARLIE BROWN SN",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3316",
+          "nome": "WOODSTOCK SN",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3317",
+          "nome": "LUCY SN",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3458",
+          "nome": "DOBBY HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3459",
+          "nome": "SIRIUS BLACK HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3460",
+          "nome": "MINERVA HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3461",
+          "nome": "SEVERUS SNAPE HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3462",
+          "nome": "MALFOY",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        },
+        {
+          "referencia": "3463",
+          "nome": "VOLDEMORT HP",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 72.04,
+          "imagens": []
+        }
+      ]
+    },
+    {
+      "nome": "MASTERPIECE",
+      "produtos": [
+        {
+          "referencia": "3822",
+          "nome": "HARRY POTTER",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 62.88,
+          "imagens": []
+        },
+        {
+          "referencia": "3823",
+          "nome": "HERMIONE",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 62.88,
+          "imagens": []
+        },
+        {
+          "referencia": "3824",
+          "nome": "RON",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 62.88,
+          "imagens": []
+        },
+        {
+          "referencia": "3825",
+          "nome": "SUPERMAN",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 125.61,
+          "imagens": []
+        },
+        {
+          "referencia": "3826",
+          "nome": "BATMAN",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 125.61,
+          "imagens": []
+        },
+        {
+          "referencia": "3827",
+          "nome": "MULHER MARAVILHA",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 125.61,
+          "imagens": []
+        },
+        {
+          "referencia": "3828",
+          "nome": "FLASH",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 125.61,
+          "imagens": []
+        }
+      ]
+    },
+    {
+      "nome": "Brinquedos",
+      "produtos": [
+        {
+          "referencia": "49",
+          "nome": "FOFOMOVEL MCQUEEN",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "72",
+          "nome": "JOGO DE BOLICHE PRINCESAS",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "102",
+          "nome": "BOLA MARMORIZADA",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "109",
+          "nome": "BOLA CONFETE",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "112",
+          "nome": "BOLA SOCCER SORTIDA",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "113",
+          "nome": "BOLA SPORT BALL",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "115",
+          "nome": "BOLA VINIL BRASIL COPA LIDER",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "120",
+          "nome": "BOLA CAMISA 10",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "121",
+          "nome": "BOLA ARTILHEIRO",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "135",
+          "nome": "BOLA BRASINHA",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "137",
+          "nome": "BOLA PINGO DE LEITE",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "140",
+          "nome": "BOLA VOLLEY STAR",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "141",
+          "nome": "BOLA MASTER",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "142",
+          "nome": "BOLA GOLACO",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "143",
+          "nome": "BOLA MINI FRISADA",
+          "tamanho": "",
+          "cxMestre": 240,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "144",
+          "nome": "BOLA GOLEADOR",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "160",
+          "nome": "BOLA PEROLIZADA",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "164",
+          "nome": "BOLA BRILHANTE",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "186",
+          "nome": "BOLA VINIL BANDEIRAS COPA LIDER",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "189",
+          "nome": "BOLA VINIL PENTAGONO COPA LIDER",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "227",
+          "nome": "CARRINHO COMPRAS LIDER",
+          "tamanho": "",
+          "cxMestre": 2,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "228",
+          "nome": "CARRO DE BONECA LIDER",
+          "tamanho": "",
+          "cxMestre": 2,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "229",
+          "nome": "CARRO DE BONECAS LIDER",
+          "tamanho": "",
+          "cxMestre": 2,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "240",
+          "nome": "BONECOS MINIATURAS TURMA DO MICKEY",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "265",
+          "nome": "AGARRADINHO TOY STORY UNITARIO",
+          "tamanho": "",
+          "cxMestre": 12,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "281",
+          "nome": "BOLA BASQUETE PESADA LIDER",
+          "tamanho": "",
+          "cxMestre": 60,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "287",
+          "nome": "BOLA COBRINHA",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "288",
+          "nome": "BOLA VINIL NAVE",
+          "tamanho": "",
+          "cxMestre": 120,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "297",
+          "nome": "BOLINHA ESGUICHO MINNIONS",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "309",
+          "nome": "CHUTE A GOL LIDER",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "353",
+          "nome": "ARENA BLADE STADIUM",
+          "tamanho": "",
+          "cxMestre": 12,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "359",
+          "nome": "JUMP BALL SPIDERMAN",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "372",
+          "nome": "JOGO DE TACOS SPIDERMAN",
+          "tamanho": "",
+          "cxMestre": 6,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "373",
+          "nome": "AMARELINHA TOY STORY",
+          "tamanho": "",
+          "cxMestre": 4,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        },
+        {
+          "referencia": "400",
+          "nome": "CAVALINHO NO SACO",
+          "tamanho": "",
+          "cxMestre": 3,
+          "descricao": "",
+          "preco": 0,
+          "imagens": []
+        }
+      ]
+    }
+  ]
+}
