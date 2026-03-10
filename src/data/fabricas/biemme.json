@@ -1,0 +1,48 @@
+{
+  "categorias": [
+    {
+      "nome": "Carros",
+      "produtos": [
+        {
+          "referencia": "5001",
+          "nome": "CAR ONE AD BRANCO",
+          "tamanho": "90 x 55 x 44 cm",
+          "cxMestre": 1,
+          "descricao": "Olá! Sou o Car One AD 6V Biemme, fabricado 100% no Brasil, faço parte da linha premium dos mini veículos da Biemme. Meu design compacto é muito charmoso. Tenho luzes e som, entrada para USB, funciono tanto com controle remoto quanto acionado pelo pedal.\n\nVolante com buzina eletrônica. Banco anatômico com cinto de segurança regulável com dois pontos. Calotas metalizadas. Farol com luzes. Painel com botão ON e OFF, conexão para cartão de memória, MP3 e USB. Portas que abrem. Botão de segurança para corte de funcionamento do carrinho tanto no manual quanto no controle.\n\nEspecificações Técnicas:\nBateria: 6V recarregável\nTempo de carregamento: 8 a 12 horas\nPeso máximo suportado: 25 kg\nPeso bruto: 11,55 kg\nPeso líquido: 9,705 kg\nDimensões da embalagem: 90,5 x 51 x 43 cm (CxLxA)\nDimensões do produto: 90 x 55 x 44 cm (CxLxA)\nVolume da caixa: 0,20 m³\nCódigo de Barras: 7898319426399\nFaixa etária: 1 a 3 anos\n\nAcompanha: 1 Carro elétrico, 1 Controle remoto, 1 Carregador bivolt, 1 Manual de instruções\nFabricado no Brasil",
+          "preco": 0.00,
+          "imagens": [
+            "https://biemme.com.br/wp-content/uploads/2022/06/f22-4.png"
+          ]
+        },
+        {
+          "referencia": "5002",
+          "nome": "CAR ONE PS BRANCO",
+          "tamanho": "103 x 62 x 47 cm",
+          "cxMestre": 1,
+          "descricao": "Olá! Sou o Car One PS 12V Biemme, fabricado 100% no Brasil, faço parte da linha premium dos mini veículos da Biemme. Possuo amortecedores nas quatro rodas, meu design esportivo inspirado no Porsche deixará seus passeios ainda mais com gostinho de aventura. Tenho luzes e som, entrada para USB, funciono tanto com controle remoto quanto acionado pelo pedal. Caso minha bateria acabe durante o passeio, minhas rodinhas traseiras e alça dianteira facilitam o transporte.\n\nVolante com buzina eletrônica. Banco anatômico com cinto de segurança regulável de dois pontos. Calotas metalizadas. Faróis com luzes dianteiras e traseiras. Alça dianteira e rodinhas na traseira para transporte do brinquedo. Portas que abrem. Painel com botão ON/OFF, conexão para cartão de memória, MP3, USB e sequência de 5 músicas diferentes.\n\nEspecificações Técnicas:\nBateria: 12V 4,5Ah recarregável\nTempo de carregamento: 8 a 12 horas\nDuração da bateria: aproximadamente 1 hora em uso\nVelocidade máxima: 4 a 5 km/h\nPeso máximo suportado: 30 kg\nFaixa etária: 1 a 3 anos\nMaterial: Plástico injetado\nDimensões do produto: 103 x 62 x 47 cm (CxLxA)\nCertificação: CE-BRI/INNAC-00658-01A NM300/2002 — INMETRO\nGarantia: 3 meses contra defeitos de fabricação\n\nAcompanha: 1 Carro elétrico, 1 Controle remoto, 1 Carregador bivolt, 1 Manual de instruções\nControle remoto: 2 pilhas AAA (não inclusas) — alcance até 5 metros\nFabricado no Brasil",
+          "preco": 0.00,
+          "imagens": [
+            "https://biemme.com.br/wp-content/uploads/2022/09/DSC_0246-e1742927957678.jpg"
+          ]
+        }
+
+      ]
+    },
+    {
+      "nome": "Motos",
+      "produtos": [
+        {
+          "referencia": "5003",
+          "nome": "SPRINT TURBO PRETA",
+          "tamanho": "116,5 x 64,5 x 80,5 cm",
+          "cxMestre": 1,
+          "descricao": "Olá! Sou a Moto Sprint Turbo 12V Biemme, fabricada 100% no Brasil. Tenho um design robusto e arrojado, rodas largas com faixa antiderrapante, painel eletrônico com farol, setas e divertidos sons. Boto frente, ré e neutro, acelerador de pedal com trava de segurança removível e suporte para os pés antiderrapante. Venho com bagageiro e capacete grátis incluído!\n\nRodas grandes e resistentes com calotas e cinta de borracha. Assento anatômico antiderrapante. Carenagem com farol e setas com luzes. Botão de marcha frente, ré e neutro. Painel de acionamento de luzes e som. Bagageiro. Motor lateral decorativo. Acelerador de pedal com trava de segurança removível. Suporte para pés antiderrapante. Retrovisores e manoplas anatômicas.\n\nA Sprint Turbo não possui controle remoto — a própria criança controla o brinquedo pelo pedal de aceleração e pelo guidão.\n\nEspecificações Técnicas:\nBateria: 12V — 2 baterias de 6V 4,5Ah seladas\nTempo de recarga: 1ª carga 6 horas; demais 4 a 6 horas\nDuração da bateria: até 1 hora em uso contínuo\nVelocidade máxima: 4 a 5 km/h\nPeso máximo suportado: 35 kg\nPeso do produto: 14,8 kg\nFaixa etária: 3 a 6 anos\nDimensões do produto: 116,5 x 64,5 x 80,5 cm (CxLxA)\nCarregador: bivolt 127/220V AC\nCertificação: CE-BRI/INNAC-00658-01A NM300/2002 — INMETRO\nGarantia: 3 meses contra defeitos de fabricação\n\nAcompanha: 1 Moto elétrica, 1 Capacete, 1 Carregador bivolt, Adesivos personalizados, 1 Manual de instruções\nFabricado no Brasil",
+          "preco": 0.00,
+          "imagens": [
+            "https://biemme.com.br/wp-content/uploads/2022/06/DSC_1400-e1742930987545.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}

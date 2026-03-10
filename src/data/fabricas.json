@@ -6,6 +6,14 @@
     "icone": "🏺",
     "cor": "#D4572A",
     "pedidoMinimo": 500
+  },
+  {
+    "id": "biemme",
+    "nome": "Biemme",
+    "logo": "https://biemme.com.br/wp-content/uploads/2022/05/logo-biemme-vertical.png",
+    "icone": "🏺",
+    "cor": "#D4572A",
+    "pedidoMinimo": 500
   }
 ]
 

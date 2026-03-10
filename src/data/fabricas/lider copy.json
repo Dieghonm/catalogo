@@ -3,96 +3,7 @@
     {
       "nome": "Fandom Box",
       "produtos": [
-        {
-          "referencia": "3246",
-          "nome": "PERNALONGA LOONEY",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3247",
-          "nome": "PATOLINO LOONEY",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3248",
-          "nome": "TAZ LOONEY",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3249",
-          "nome": "PIU PIU LOONEY",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3250",
-          "nome": "FRAJOLA LOONEY",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3251",
-          "nome": "SCOOBY DOO SD",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3252",
-          "nome": "SALSICHA SD",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3253",
-          "nome": "FRED SD",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3254",
-          "nome": "DAPHNE SD",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3255",
-          "nome": "VELMA SD",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
+
         {
           "referencia": "3256",
           "nome": "HARRY POTTER HP",
@@ -138,60 +49,7 @@
           "preco": 72.04,
           "imagens": []
         },
-        {
-          "referencia": "3261",
-          "nome": "MONICA FRIENDS",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3262",
-          "nome": "PHOEBE FRIENDS",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3263",
-          "nome": "RACHEL FRIENDS",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3264",
-          "nome": "JOEY FRIENDS",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3265",
-          "nome": "ROSS FRIENDS",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3266",
-          "nome": "CHANDLER FRIENDS",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
+
         {
           "referencia": "3276",
           "nome": "HARRY POTTER - LUNA",
@@ -201,42 +59,7 @@
           "preco": 72.04,
           "imagens": []
         },
-        {
-          "referencia": "3299",
-          "nome": "HELLO HK",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3300",
-          "nome": "CHOCOCCAT HK",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3301",
-          "nome": "KEROPPI HK",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
-        {
-          "referencia": "3302",
-          "nome": "MARU HK",
-          "tamanho": "",
-          "cxMestre": 4,
-          "descricao": "",
-          "preco": 72.04,
-          "imagens": []
-        },
+
         {
           "referencia": "3303",
           "nome": "BOB ESPONJA BE",
