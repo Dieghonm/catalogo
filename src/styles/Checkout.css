@@ -1,0 +1,221 @@
+/* =============================================
+   CHECKOUT PAGE
+   ============================================= */
+.checkout-page { padding-top: 24px; max-width: 820px; }
+
+/* ── Steps bar ── */
+.etapas-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+}
+.etapa {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink3);
+  transition: color 0.2s;
+}
+.etapa span {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--ink3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  transition: background 0.2s, color 0.2s;
+}
+.etapa.ativa { color: var(--accent); }
+.etapa.ativa span { background: var(--accent); color: #fff; }
+.etapa.concluida span { background: var(--green); color: #fff; }
+.etapa-linha {
+  flex: 1;
+  height: 1.5px;
+  background: var(--border);
+  margin: 0 12px;
+}
+
+/* ── Step card ── */
+.checkout-step {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.checkout-fab-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  background: color-mix(in srgb, var(--fab-cor, var(--accent)) 6%, transparent);
+  border-bottom: 1.5px solid var(--border);
+  position: relative;
+}
+.checkout-fab-header::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--fab-cor, var(--accent));
+}
+.checkout-fab-logo { height: 36px; width: auto; max-width: 100px; object-fit: contain; }
+.checkout-fab-sub {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ink3);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.checkout-fab-header h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+/* ── Table ── */
+.checkout-table-wrap {
+  padding: 20px 24px;
+  overflow-x: auto;
+}
+.checkout-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.checkout-table th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink3);
+  font-weight: 700;
+  padding: 0 10px 10px;
+  border-bottom: 1.5px solid var(--border);
+}
+.checkout-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink2);
+}
+.checkout-table tr:last-child td { border-bottom: none; }
+.checkout-table tbody tr:hover td { background: var(--bg); }
+.checkout-table tfoot td {
+  padding: 12px 10px;
+  border-top: 1.5px solid var(--border);
+  background: var(--bg);
+}
+.total-label {
+  font-weight: 700;
+  color: var(--ink);
+  text-align: right;
+  font-size: 0.88rem;
+}
+.total-value {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ── Form ── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 20px 24px;
+}
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group.full { grid-column: span 2; }
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form-group input,
+.form-group textarea {
+  padding: 9px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  transition: border-color 0.15s;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus { border-color: var(--accent); background: #fff; }
+.form-group textarea { resize: vertical; min-height: 72px; }
+
+/* ── Actions ── */
+.checkout-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1.5px solid var(--border);
+  background: var(--bg);
+  gap: 12px;
+}
+.btn-voltar-checkout {
+  font-size: 0.88rem;
+  color: var(--ink3);
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-voltar-checkout:hover { border-color: var(--ink2); color: var(--ink); }
+
+.btn-prosseguir {
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 11px 28px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, transform 0.15s, opacity 0.2s;
+}
+.btn-prosseguir:hover:not(:disabled) { background: #bf4a22; transform: translateY(-1px); }
+.btn-prosseguir:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-finalizar-ok {
+  background: var(--green);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 11px 28px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-finalizar-ok:hover { background: #236349; transform: translateY(-1px); }
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .form-grid { grid-template-columns: 1fr; padding: 14px 16px; }
+  .form-group.full { grid-column: 1; }
+  .checkout-actions { flex-direction: column; align-items: stretch; }
+  .btn-prosseguir, .btn-finalizar-ok, .btn-voltar-checkout { text-align: center; }
+  .etapa { font-size: 0.72rem; }
+  .etapa span { width: 20px; height: 20px; font-size: 0.68rem; }
+  .etapas-bar { padding: 10px 12px; }
+  .checkout-table-wrap { padding: 12px; }
+  .checkout-fab-header { padding: 14px 16px; }
+}

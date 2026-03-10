@@ -1,0 +1,108 @@
+/* =============================================
+   RESET & VARIABLES
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #F7F4EF;
+  --bg2:        #EDEAE3;
+  --surface:    #FFFFFF;
+  --ink:        #1A1714;
+  --ink2:       #5C574F;
+  --ink3:       #9C9388;
+  --accent:     #D4572A;
+  --accent2:    #E8825A;
+  --accent-light: #FBE8DF;
+  --green:      #2D7A5F;
+  --border:     #E2DDD6;
+  --shadow:     0 2px 12px rgba(0,0,0,0.07);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.12);
+  --radius:     14px;
+  --radius-sm:  8px;
+  --font-display: 'Nunito', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; width: 100%; object-fit: cover; }
+button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+
+.app-body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px 72px;
+}
+
+/* Shared badge */
+.badge-destaque {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+/* Shared empty state */
+.empty {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--ink3);
+}
+.empty p { margin-bottom: 8px; font-size: 1.05rem; }
+
+/* Not found */
+.not-found {
+  text-align: center;
+  padding: 80px 24px;
+}
+.not-found h2 { font-size: 1.5rem; margin-bottom: 20px; }
+
+/* btn-voltar */
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--ink2);
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 24px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-voltar:hover { border-color: var(--accent); color: var(--accent); }
+
+/* chip */
+.chip {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-right: 6px;
+  margin-bottom: 12px;
+}
+.chip-gray  { background: var(--bg2); color: var(--ink3); }
+.chip-destaque { background: #FFF8E1; color: #B7770D; }
+
+@media (max-width: 600px) {
+  .app-body { padding: 0 14px 48px; }
+}

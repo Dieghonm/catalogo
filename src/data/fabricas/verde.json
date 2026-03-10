@@ -1,0 +1,68 @@
+{
+  "categorias": [
+    {
+      "nome": "Pelúcias",
+      "produtos": [
+        {
+          "referencia": "VD-001",
+          "nome": "TAZ Pelúcias 01",
+          "tamanho": "P",
+          "cxMestre": 4,
+          "descricao": "Produto da linha Pelúcias com personagem TAZ. Material premium, acabamento impecável.",
+          "preco": 12.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg"]
+        },
+        {
+          "referencia": "VD-002",
+          "nome": "Piu Piu Pelúcias 02",
+          "tamanho": "M",
+          "cxMestre": 6,
+          "descricao": "Produto da linha Pelúcias com Piu Piu. Ideal para uso diário, resistente e durável.",
+          "preco": 18.50,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg"]
+        },
+        {
+          "referencia": "VD-003",
+          "nome": "Frajola Pelúcias 03",
+          "tamanho": "G",
+          "cxMestre": 2,
+          "descricao": "Produto premium da linha Pelúcias com Frajola. Design exclusivo e acabamento superior.",
+          "preco": 34.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg"]
+        }
+      ]
+    },
+    {
+      "nome": "Fantoches",
+      "produtos": [
+        {
+          "referencia": "VD-004",
+          "nome": "TAZ Fantoches 01",
+          "tamanho": "G",
+          "cxMestre": 2,
+          "descricao": "Produto da linha Fantoches com TAZ. Design exclusivo e acabamento superior.",
+          "preco": 34.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg"]
+        },
+        {
+          "referencia": "VD-005",
+          "nome": "Piu Piu Fantoches 02",
+          "tamanho": "GG",
+          "cxMestre": 1,
+          "descricao": "Produto maior da linha Fantoches com Piu Piu. Para quem busca o melhor em qualidade.",
+          "preco": 54.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg"]
+        },
+        {
+          "referencia": "VD-006",
+          "nome": "Frajola Fantoches 03",
+          "tamanho": "P",
+          "cxMestre": 4,
+          "descricao": "Produto da linha Fantoches com Frajola. Acabamento premium e design exclusivo.",
+          "preco": 22.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg"]
+        }
+      ]
+    }
+  ]
+}

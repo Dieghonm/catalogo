@@ -1,0 +1,68 @@
+{
+  "categorias": [
+    {
+      "nome": "Colecionáveis",
+      "produtos": [
+        {
+          "referencia": "PM-001",
+          "nome": "TAZ Colecionáveis 01",
+          "tamanho": "P",
+          "cxMestre": 4,
+          "descricao": "Produto da linha Colecionáveis com personagem TAZ. Material premium, acabamento impecável.",
+          "preco": 12.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg"]
+        },
+        {
+          "referencia": "PM-002",
+          "nome": "Piu Piu Colecionáveis 02",
+          "tamanho": "M",
+          "cxMestre": 6,
+          "descricao": "Produto da linha Colecionáveis com Piu Piu. Ideal para uso diário, resistente e durável.",
+          "preco": 18.50,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg"]
+        },
+        {
+          "referencia": "PM-003",
+          "nome": "Frajola Colecionáveis 03",
+          "tamanho": "G",
+          "cxMestre": 2,
+          "descricao": "Produto premium da linha Colecionáveis com Frajola. Design exclusivo e acabamento superior.",
+          "preco": 34.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg"]
+        }
+      ]
+    },
+    {
+      "nome": "Edição Limitada",
+      "produtos": [
+        {
+          "referencia": "PM-004",
+          "nome": "TAZ Edição Limitada 01",
+          "tamanho": "G",
+          "cxMestre": 2,
+          "descricao": "Produto da linha Edição Limitada com TAZ. Design exclusivo e acabamento superior.",
+          "preco": 34.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg"]
+        },
+        {
+          "referencia": "PM-005",
+          "nome": "Piu Piu Edição Limitada 02",
+          "tamanho": "GG",
+          "cxMestre": 1,
+          "descricao": "Produto maior da linha Edição Limitada com Piu Piu. Para quem busca o melhor em qualidade.",
+          "preco": 54.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080388/TAZ_2_w3mzrp.jpg"]
+        },
+        {
+          "referencia": "PM-006",
+          "nome": "Frajola Edição Limitada 03",
+          "tamanho": "P",
+          "cxMestre": 4,
+          "descricao": "Produto da linha Edição Limitada com Frajola. Acabamento premium e design exclusivo.",
+          "preco": 22.90,
+          "imagens": ["https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080402/frajola_x87j5y.jpg", "https://res.cloudinary.com/dfkebb4ds/image/upload/v1773080405/PIU_PIU_2_abuwj3.jpg"]
+        }
+      ]
+    }
+  ]
+}

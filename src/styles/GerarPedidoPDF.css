@@ -1,0 +1,76 @@
+/* =============================================
+   GERAR PEDIDO PDF
+   ============================================= */
+.pdf-preview {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.pdf-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1.5px solid var(--border);
+  background: var(--bg);
+}
+.pdf-preview-header h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+}
+.pdf-numero {
+  font-size: 0.78rem;
+  color: var(--ink3);
+  font-family: monospace;
+}
+.pdf-body { padding: 24px; }
+.pdf-cliente-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.pdf-cliente-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.pdf-cliente-item label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink3);
+  font-weight: 700;
+}
+.pdf-cliente-item span {
+  font-size: 0.88rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.btn-download-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 11px 24px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-download-pdf:hover { background: #bf4a22; transform: translateY(-1px); }
+
+@media (max-width: 600px) {
+  .pdf-cliente-grid { grid-template-columns: 1fr; }
+  .pdf-body { padding: 14px; }
+}

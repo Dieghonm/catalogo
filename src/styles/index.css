@@ -1,0 +1,12 @@
+/* =============================================
+   STYLES INDEX — importa todos os módulos CSS
+   ============================================= */
+@import './variables.css';
+@import './Header.css';
+@import './Home.css';
+@import './Catalogo.css';
+@import './ProdutoCard.css';
+@import './Produto.css';
+@import './Carrinho.css';
+@import './Checkout.css';
+@import './GerarPedidoPDF.css';
