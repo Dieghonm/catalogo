@@ -8,15 +8,19 @@ import { loadAllData, getFabricas, getTodosProdutos, getFabrica as _getFabrica, 
 const DataContext = createContext(null)
 
 export function DataProvider({ children }) {
-  const [status, setStatus] = useState('loading') // 'loading' | 'ready' | 'error'
-  const [error,  setError]  = useState(null)
-  const [tick,   setTick]   = useState(0)
+  const [status,        setStatus]        = useState('loading') // 'loading' | 'ready' | 'error'
+  const [error,         setError]         = useState(null)
+  // ✅ CORREÇÃO: dados guardados no estado React (não em getters de módulo)
+  const [fabricas,      setFabricas]      = useState([])
+  const [todosProdutos, setTodosProdutos] = useState([])
 
   useEffect(() => {
     loadAllData()
       .then(() => {
+        // ✅ Captura os dados DEPOIS do load e salva no estado React
+        setFabricas(getFabricas())
+        setTodosProdutos(getTodosProdutos())
         setStatus('ready')
-        setTick(t => t + 1)   // força re-render após load
       })
       .catch(err => {
         console.error('Erro ao carregar dados:', err)
@@ -28,8 +32,8 @@ export function DataProvider({ children }) {
   const value = {
     status,
     error,
-    FABRICAS:       getFabricas(),
-    TODOS_PRODUTOS: getTodosProdutos(),
+    FABRICAS:       fabricas,
+    TODOS_PRODUTOS: todosProdutos,
     getFabrica:     _getFabrica,
     getProduto:     _getProduto,
   }

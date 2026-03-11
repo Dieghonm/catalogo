@@ -143,8 +143,6 @@ function parseSheet(rows, fabricaId) {
 
 // ── Carrega um arquivo .xlsx via fetch + SheetJS ─────────────
 async function loadXlsx(path) {
-  // SheetJS deve estar disponível via import ou CDN
-  // Tentamos import dinâmico primeiro, depois window.XLSX
   let XLSX
   try {
     XLSX = await import('https://cdn.sheetjs.com/xlsx-0.20.3/package/xlsx.mjs')
@@ -178,58 +176,58 @@ async function loadXlsx(path) {
 }
 
 // ── Estado global (preenchido por loadAllData) ───────────────
-let _FABRICAS      = []
+let _FABRICAS       = []
 let _TODOS_PRODUTOS = []
-let _loaded        = false
+// ✅ CORREÇÃO: removido _loaded=true para evitar bug em dev (hot reload)
+// A Promise é guardada para evitar múltiplas chamadas simultâneas
+let _loadingPromise = null
 
 // ── Carrega tudo de forma assíncrona ─────────────────────────
 export async function loadAllData() {
-  if (_loaded) return
+  // ✅ Se já está carregando, retorna a mesma promise (evita chamadas duplicadas)
+  if (_loadingPromise) return _loadingPromise
 
-  // Resolve base URL para os xlsx (assumidos em /public/data/fabricas/)
-  const base = import.meta.env.BASE_URL ?? '/'
+  _loadingPromise = (async () => {
+    const base = import.meta.env.BASE_URL ?? '/'
 
-  const fabricasComProdutos = await Promise.all(
-    fabricasRaw.map(async fab => {
-      const arquivos = fab.arquivos ?? []
-      let todosProdutos = []
+    const fabricasComProdutos = await Promise.all(
+      fabricasRaw.map(async fab => {
+        const arquivos = fab.arquivos ?? []
+        let todosProdutos = []
 
-      for (const arquivo of arquivos) {
-        const url  = `${base}data/fabricas/${arquivo}`
-        const rows = await loadXlsx(url)
-        const prods = parseSheet(rows, fab.id)
-        todosProdutos.push(...prods)
-      }
+        for (const arquivo of arquivos) {
+          const url  = `${base}data/fabricas/${arquivo}`
+          const rows = await loadXlsx(url)
+          const prods = parseSheet(rows, fab.id)
+          todosProdutos.push(...prods)
+        }
 
-      // Injeta destaques
-      destaquesRaw.forEach(({ fabricaId, referencia }) => {
-        if (fabricaId !== fab.id) return
-        const prod = todosProdutos.find(p => p.referencia === referencia)
-        if (prod) prod.destaque = true
+        // Injeta destaques
+        destaquesRaw.forEach(({ fabricaId, referencia }) => {
+          if (fabricaId !== fab.id) return
+          const prod = todosProdutos.find(p => p.referencia === referencia)
+          if (prod) prod.destaque = true
+        })
+
+        return {
+          ...fab,
+          produtos: todosProdutos,
+          categorias: [...new Set(todosProdutos.map(p => p.categoria))],
+        }
       })
+    )
 
-      return {
-        ...fab,
-        produtos: todosProdutos,
-        categorias: [...new Set(todosProdutos.map(p => p.categoria))],
-      }
-    })
-  )
+    _FABRICAS       = fabricasComProdutos
+    _TODOS_PRODUTOS = fabricasComProdutos.flatMap(f => f.produtos)
+  })()
 
-  _FABRICAS       = fabricasComProdutos
-  _TODOS_PRODUTOS = fabricasComProdutos.flatMap(f => f.produtos)
-  _loaded         = true
+  return _loadingPromise
 }
 
 // ── Getters síncronos (usar após loadAllData) ─────────────────
-export const getFabricas     = ()       => _FABRICAS
-export const getTodosProdutos = ()      => _TODOS_PRODUTOS
-export const getFabrica      = (id)    => _FABRICAS.find(f => f.id === id)
-export const getProduto      = (fabricaId, referencia) =>
+export const getFabricas      = ()                    => _FABRICAS
+export const getTodosProdutos = ()                    => _TODOS_PRODUTOS
+export const getFabrica       = (id)                  => _FABRICAS.find(f => f.id === id)
+export const getProduto       = (fabricaId, referencia) =>
   (_FABRICAS.find(f => f.id === fabricaId)?.produtos ?? [])
     .find(p => p.referencia === referencia) ?? null
-
-// ── Compatibilidade com imports estáticos existentes ──────────
-// Exporta arrays reativos (inicialmente vazios, preenchidos após load)
-export let FABRICAS       = _FABRICAS
-export let TODOS_PRODUTOS = _TODOS_PRODUTOS
