@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
-import { useParams, Link, useLocation, useNavigate } from 'react-router-dom'
-import { TODOS_PRODUTOS, FABRICAS, getFabrica } from '../data/index'
+import { useParams, Link, useLocation } from 'react-router-dom'
+import { useData } from '../context'
 import ProdutoCard from '../components/ProdutoCard'
 import Filtros from '../components/Filtros'
 
@@ -9,13 +9,13 @@ const FILTROS_INIT = { categorias: [], fabricas: [], apenasDestaques: false, pre
 export default function Catalogo({ search }) {
   const { fabricaId } = useParams()
   const location = useLocation()
-  const navigate = useNavigate()
   const categoriaParam = new URLSearchParams(location.search).get('categoria')
   const [filtros, setFiltros] = useState(() => ({
     ...FILTROS_INIT,
     categorias: categoriaParam ? [categoriaParam] : [],
   }))
 
+  const { TODOS_PRODUTOS, getFabrica } = useData()
   const fabricaAtiva = fabricaId ? getFabrica(fabricaId) : null
   const categorias = fabricaAtiva
     ? [...new Set(fabricaAtiva.produtos.map(p => p.categoria))]
@@ -27,7 +27,7 @@ export default function Catalogo({ search }) {
       if (search) {
         const q = search.toLowerCase()
         if (!p.nome.toLowerCase().includes(q) &&
-            !p.descricao.toLowerCase().includes(q) &&
+            !(p.descricao ?? '').toLowerCase().includes(q) &&
             !p.referencia.toLowerCase().includes(q)) return false
       }
       if (filtros.categorias.length && !filtros.categorias.includes(p.categoria)) return false
@@ -37,7 +37,7 @@ export default function Catalogo({ search }) {
       if (filtros.precoMax !== '' && p.preco > Number(filtros.precoMax)) return false
       return true
     })
-  }, [search, filtros, fabricaAtiva])
+  }, [search, filtros, fabricaAtiva, TODOS_PRODUTOS])
 
   const activeCount = [
     filtros.categorias.length,
@@ -102,7 +102,6 @@ export default function Catalogo({ search }) {
             </div>
           )}
 
-          {/* Botões de navegação ao final */}
           <div className="catalogo-bottom-nav">
             <Link to="/" className="bottom-nav-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>

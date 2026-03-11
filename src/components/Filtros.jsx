@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FABRICAS, TODOS_PRODUTOS } from '../data/index'
+import { useData } from '../context'
 
 function GrupoFiltro({ titulo, children, defaultOpen = true }) {
   const [aberto, setAberto] = useState(defaultOpen)
@@ -15,6 +15,8 @@ function GrupoFiltro({ titulo, children, defaultOpen = true }) {
 }
 
 export default function Filtros({ filtros, setFiltros, categorias = [], ocultarFabricas = false }) {
+  const { FABRICAS, TODOS_PRODUTOS } = useData()
+
   const toggle = (key, value) => {
     setFiltros(prev => {
       const arr = prev[key]
@@ -23,9 +25,9 @@ export default function Filtros({ filtros, setFiltros, categorias = [], ocultarF
   }
   const set = (key, value) => setFiltros(prev => ({ ...prev, [key]: value }))
 
-  const allPrices = TODOS_PRODUTOS.map(p => p.preco)
-  const globalMin = Math.floor(Math.min(...allPrices))
-  const globalMax = Math.ceil(Math.max(...allPrices))
+  const allPrices = TODOS_PRODUTOS.map(p => p.preco).filter(v => v > 0)
+  const globalMin = allPrices.length ? Math.floor(Math.min(...allPrices)) : 0
+  const globalMax = allPrices.length ? Math.ceil(Math.max(...allPrices)) : 9999
 
   const clear = () => setFiltros({ categorias: [], fabricas: [], apenasDestaques: false, precoMin: '', precoMax: '' })
 
@@ -47,7 +49,7 @@ export default function Filtros({ filtros, setFiltros, categorias = [], ocultarF
           <label className="filter-label filter-label-toggle">
             <span className="toggle-text">⭐ Apenas destaques</span>
             <div
-              className={`toggle-switch ${filtros.apenasDestaques ? 'on' : ''}`}
+              className={`toggle-switch ${filtros.apenasDestaques ? 'on' : 'off'}`}
               onClick={() => set('apenasDestaques', !filtros.apenasDestaques)}
             >
               <div className="toggle-knob" />
@@ -55,36 +57,9 @@ export default function Filtros({ filtros, setFiltros, categorias = [], ocultarF
           </label>
         </GrupoFiltro>
 
-        {/* Preço */}
-        <GrupoFiltro titulo="Preço" defaultOpen={false}>
-          <div className="preco-range">
-            <div className="preco-input-wrap">
-              <span>R$</span>
-              <input
-                type="number"
-                placeholder={globalMin}
-                value={filtros.precoMin}
-                onChange={e => set('precoMin', e.target.value)}
-                min={0}
-              />
-            </div>
-            <span className="preco-sep">–</span>
-            <div className="preco-input-wrap">
-              <span>R$</span>
-              <input
-                type="number"
-                placeholder={globalMax}
-                value={filtros.precoMax}
-                onChange={e => set('precoMax', e.target.value)}
-                min={0}
-              />
-            </div>
-          </div>
-        </GrupoFiltro>
-
         {/* Categorias */}
         {categorias.length > 0 && (
-          <GrupoFiltro titulo="Categoria" defaultOpen={false}>
+          <GrupoFiltro titulo="Categorias">
             {categorias.map(cat => (
               <label key={cat} className="filter-label">
                 <input
@@ -99,8 +74,8 @@ export default function Filtros({ filtros, setFiltros, categorias = [], ocultarF
         )}
 
         {/* Fábricas */}
-        {!ocultarFabricas && (
-          <GrupoFiltro titulo="Fábrica" defaultOpen={false}>
+        {!ocultarFabricas && FABRICAS.length > 0 && (
+          <GrupoFiltro titulo="Fábricas" defaultOpen={false}>
             {FABRICAS.map(fab => (
               <label key={fab.id} className="filter-label">
                 <input
@@ -108,14 +83,37 @@ export default function Filtros({ filtros, setFiltros, categorias = [], ocultarF
                   checked={filtros.fabricas.includes(fab.id)}
                   onChange={() => toggle('fabricas', fab.id)}
                 />
-                <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <img src={fab.logo} alt={fab.nome} style={{ width: 22, height: 15, objectFit: 'contain' }} />
-                  {fab.nome}
-                </span>
+                <span>{fab.nome}</span>
               </label>
             ))}
           </GrupoFiltro>
         )}
+
+        {/* Preço */}
+        <GrupoFiltro titulo="Preço" defaultOpen={false}>
+          <p className="filter-price-range">R$ {globalMin} — R$ {globalMax}</p>
+          <div className="filter-price-inputs">
+            <input
+              type="number"
+              placeholder="Mín"
+              value={filtros.precoMin}
+              onChange={e => set('precoMin', e.target.value)}
+              className="price-input"
+              min={globalMin}
+              max={globalMax}
+            />
+            <span>—</span>
+            <input
+              type="number"
+              placeholder="Máx"
+              value={filtros.precoMax}
+              onChange={e => set('precoMax', e.target.value)}
+              className="price-input"
+              min={globalMin}
+              max={globalMax}
+            />
+          </div>
+        </GrupoFiltro>
 
       </div>
     </aside>

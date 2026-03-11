@@ -1,3 +1,3 @@
-// Barrel file — importe todos os contexts daqui
-// Exemplo: import { useCart } from '../context'
+// src/context/index.js
 export { CartProvider, useCart } from './CartContext'
+export { DataProvider, useData } from './DataContext'

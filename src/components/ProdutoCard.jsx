@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useCart } from '../context'
-import { getFabrica } from '../data/index'
+import { useData } from '../context'
 
 export default function ProdutoCard({ produto }) {
   const { add, itensFabrica } = useCart()
+  const { getFabrica } = useData()
   const fab = getFabrica(produto.fabricaId)
   const itens = itensFabrica(produto.fabricaId)
   const noCart = itens.find(i => i.referencia === produto.referencia)
@@ -25,7 +26,7 @@ export default function ProdutoCard({ produto }) {
           <h3 className="card-title">{produto.nome}</h3>
         </Link>
         <p className="card-ref"><code>{produto.referencia}</code> · CX {produto.cxMestre}</p>
-        <p className="card-desc">{produto.descricao}</p>
+        <p className="card-desc">{(produto.descricao ?? '').split('\n')[0]}</p>
         <div className="card-footer">
           <span className="card-price">
             R$ {produto.preco.toFixed(2).replace('.', ',')}

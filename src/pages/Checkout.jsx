@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useCart } from '../context'
-import { getFabrica } from '../data/index'
+import { useCart, useData } from '../context'
 import GerarPedidoPDF from '../components/GerarPedidoPDF'
 
 // ─── Etapa 1: Conferência do pedido ─────────────────────────
@@ -142,29 +141,22 @@ function DadosCliente({ fabrica, onProsseguir, onVoltar }) {
 export default function Checkout() {
   const navigate = useNavigate()
   const { itensFabrica, subtotalFabrica, clearFabrica } = useCart()
-  const [fabricaId, setFabricaId]   = useState(null)
-  const [etapa, setEtapa]           = useState(0) // 0=selecao, 1=conferencia, 2=dados, 3=pdf
+  const { getFabrica } = useData()
+  const [etapa, setEtapa]           = useState(1)
   const [dadosCliente, setDadosCliente] = useState(null)
 
-  // Se veio direto de /checkout?fabrica=xxx
   const params = new URLSearchParams(window.location.hash.split('?')[1] ?? '')
-  const fabricaIdParam = params.get('fabrica')
-  const fabAtiva = fabricaId || fabricaIdParam
+  const fabAtiva = params.get('fabrica')
 
-  const fabrica = fabAtiva ? getFabrica(fabAtiva) : null
+  const fabrica  = fabAtiva ? getFabrica(fabAtiva) : null
   const itens    = fabAtiva ? itensFabrica(fabAtiva) : []
   const subtotal = fabAtiva ? subtotalFabrica(fabAtiva) : 0
 
-  // Etapa 1 → 2
-  const irParaDados = () => setEtapa(2)
-
-  // Etapa 2 → 3
   const irParaPDF = (dados) => {
     setDadosCliente(dados)
     setEtapa(3)
   }
 
-  // Após download: limpa fábrica e volta pro carrinho
   const finalizarPedido = () => {
     clearFabrica(fabAtiva)
     navigate('/carrinho')
@@ -183,7 +175,6 @@ export default function Checkout() {
 
   return (
     <div className="checkout-page">
-      {/* Indicador de etapas */}
       <div className="etapas-bar">
         <div className={`etapa ${etapa >= 1 ? 'ativa' : ''} ${etapa > 1 ? 'concluida' : ''}`}>
           <span>1</span> Conferência
@@ -198,7 +189,7 @@ export default function Checkout() {
         </div>
       </div>
 
-      {etapa <= 1 && (
+      {etapa === 1 && (
         <ConferenciaPedido
           fabrica={fabrica}
           itens={itens}

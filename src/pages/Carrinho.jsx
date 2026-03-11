@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useCart } from '../context'
-import { FABRICAS } from '../data/index'
+import { useCart, useData } from '../context'
 
 export default function Carrinho() {
   const navigate = useNavigate()
   const { items, remove, updateQty, total, clear, itensFabrica, subtotalFabrica } = useCart()
+  const { FABRICAS } = useData()
 
   if (items.length === 0) {
     return (
@@ -17,7 +17,6 @@ export default function Carrinho() {
     )
   }
 
-  // Apenas as fábricas que têm itens no carrinho
   const fabricasComItens = FABRICAS.filter(f => itensFabrica(f.id).length > 0)
   const totalItens = items.reduce((s, i) => s + i.qty, 0)
 
@@ -38,7 +37,6 @@ export default function Carrinho() {
 
             return (
               <div key={fab.id} className="carrinho-grupo">
-                {/* Header da fábrica */}
                 <div className="carrinho-grupo-header" style={{ '--fab-cor': fab.cor }}>
                   <img src={fab.logo} alt={fab.nome} className="grupo-logo" />
                   <span className="grupo-nome">{fab.nome}</span>
@@ -47,7 +45,6 @@ export default function Carrinho() {
                   </span>
                 </div>
 
-                {/* Itens */}
                 {itens.map(item => (
                   <div key={item.referencia} className="carrinho-item">
                     <img src={item.imagem} alt={item.nome} />
@@ -60,13 +57,13 @@ export default function Carrinho() {
                         {item.tamanho && <span> · {item.tamanho}</span>}
                       </p>
                       <p className="item-preco-unit">
-                        R$ {item.preco.toFixed(2).replace('.', ',')} · CX {item.cxMestre}
+                        R$ {item.preco.toFixed(2).replace('.', ',')} / un.
                       </p>
                     </div>
-                    <div className="item-qty">
-                      <button onClick={() => updateQty(fab.id, item.referencia, item.qty - item.cxMestre)}>−</button>
+                    <div className="item-qty-ctrl">
+                      <button onClick={() => updateQty(fab.id, item.referencia, item.qty - (item.cxMestre || 1))}>−</button>
                       <span>{item.qty}</span>
-                      <button onClick={() => updateQty(fab.id, item.referencia, item.qty + item.cxMestre)}>+</button>
+                      <button onClick={() => updateQty(fab.id, item.referencia, item.qty + (item.cxMestre || 1))}>+</button>
                     </div>
                     <div className="item-subtotal">
                       R$ {(item.preco * item.qty).toFixed(2).replace('.', ',')}
@@ -75,35 +72,24 @@ export default function Carrinho() {
                   </div>
                 ))}
 
-                {/* Barra de pedido mínimo + botão finalizar */}
-                <div className="grupo-footer" style={{ '--fab-cor': fab.cor }}>
-                  <div className="pedido-minimo-wrap">
-                    <div className="pedido-minimo-barra">
-                      <div
-                        className="pedido-minimo-fill"
-                        style={{
-                          width: `${Math.min(100, (subtotal / fab.pedidoMinimo) * 100)}%`,
-                          background: ok ? '#2D7A5F' : fab.cor
-                        }}
-                      />
-                    </div>
-                    {ok ? (
-                      <p className="pedido-minimo-ok">✓ Pedido mínimo atingido!</p>
-                    ) : (
-                      <p className="pedido-minimo-falta">
-                        Faltam <strong>R$ {falta.toFixed(2).replace('.', ',')}</strong> para o mínimo
-                        de R$ {fab.pedidoMinimo.toFixed(0)}
-                      </p>
-                    )}
-                  </div>
+                <div className={`pedido-minimo-bar ${ok ? 'ok' : 'pendente'}`}>
+                  {ok ? (
+                    <span>✓ Pedido mínimo atingido</span>
+                  ) : (
+                    <span>
+                      Falta R$ {falta.toFixed(2).replace('.', ',')} para o pedido mínimo de R$ {fab.pedidoMinimo.toFixed(2).replace('.', ',')}
+                    </span>
+                  )}
+                </div>
+
+                <div className="carrinho-grupo-footer">
                   <button
-                    className="btn-finalizar-fab"
-                    style={{ background: ok ? '#2D7A5F' : '#ccc', cursor: ok ? 'pointer' : 'not-allowed' }}
+                    className="btn-checkout"
                     disabled={!ok}
-                    onClick={() => navigate(`/checkout#?fabrica=${fab.id}`)}
-                    title={!ok ? `Pedido mínimo: R$ ${fab.pedidoMinimo}` : `Finalizar pedido ${fab.nome}`}
+                    style={{ background: ok ? fab.cor : undefined }}
+                    onClick={() => navigate(`/checkout?fabrica=${fab.id}`)}
                   >
-                    {ok ? `Finalizar pedido ${fab.nome} →` : `Mínimo R$ ${fab.pedidoMinimo}`}
+                    Fechar pedido {fab.nome}
                   </button>
                 </div>
               </div>
@@ -111,30 +97,14 @@ export default function Carrinho() {
           })}
         </div>
 
-        {/* Resumo lateral */}
         <aside className="carrinho-resumo">
-          <h3>Resumo geral</h3>
-          {fabricasComItens.map(fab => {
-            const sub = subtotalFabrica(fab.id)
-            const ok  = sub >= fab.pedidoMinimo
-            return (
-              <div key={fab.id} className="resumo-linha">
-                <span style={{ display:'flex', alignItems:'center', gap:6 }}>
-                  <span style={{ color: fab.cor }}>{fab.icone}</span> {fab.nome}
-                  {!ok && <span className="resumo-alerta">⚠</span>}
-                </span>
-                <span style={{ color: ok ? 'inherit' : '#c0392b' }}>
-                  R$ {sub.toFixed(2).replace('.', ',')}
-                </span>
-              </div>
-            )
-          })}
-          <hr />
+          <h3>Resumo</h3>
+          <p>{totalItens} item{totalItens !== 1 ? 's' : ''}</p>
           <div className="resumo-total">
-            <span>{totalItens} item{totalItens !== 1 ? 's' : ''}</span>
+            <span>Total</span>
             <strong>R$ {total.toFixed(2).replace('.', ',')}</strong>
           </div>
-          <p className="resumo-hint">Finalize cada fábrica separadamente no bloco acima.</p>
+          <Link to="/" className="btn-continuar">← Continuar comprando</Link>
         </aside>
       </div>
     </div>

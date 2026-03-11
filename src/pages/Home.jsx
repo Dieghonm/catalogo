@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
-import { FABRICAS, TODOS_PRODUTOS } from '../data/index'
+import { useData } from '../context'
 
 const LOGO = 'https://res.cloudinary.com/dfkebb4ds/image/upload/v1773094598/Captura_de_tela_de_2026-03-09_19-11-03_agakbo.png'
 
 export default function Home() {
+  const { FABRICAS, TODOS_PRODUTOS } = useData()
+
   const totalProdutos = TODOS_PRODUTOS.length
   const categorias = [...new Set(TODOS_PRODUTOS.map(p => p.categoria))].sort()
 
@@ -73,14 +75,6 @@ export default function Home() {
             )
           })}
         </div>
-      </section>
-
-      {/* ── CTA ────────────────────────────────────────── */}
-      <section className="cta-catalogo">
-        <p>Ou prefere navegar por tudo de uma vez?</p>
-        <Link to="/catalogo" className="btn-catalogo-geral">
-          Ver catálogo completo
-        </Link>
       </section>
 
     </div>
