@@ -3,7 +3,7 @@
 // Use useData() em qualquer componente para acessar FABRICAS, TODOS_PRODUTOS, etc.
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import { loadAllData, getFabricas, getTodosProdutos, getFabrica as _getFabrica, getProduto as _getProduto } from '../../public/data/index'
+import { loadAllData, getFabricas, getTodosProdutos, getFabrica as _getFabrica, getProduto as _getProduto } from '../index'
 
 const DataContext = createContext(null)
 
